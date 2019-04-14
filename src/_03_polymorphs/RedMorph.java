@@ -3,17 +3,18 @@ package _03_polymorphs;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class BluePolymorph extends Polymorph{
+public class RedMorph extends Polymorph{
 
 	private int height;
 	private int width;
 	
-	BluePolymorph(int x, int y, int width, int height) {
+	RedMorph(int x, int y, int width, int height) {
 		super(x, y);
 		this.width = width;
 		this.height = height;
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	public void setHeight(int a) {
 		height = a;
 	}
@@ -27,10 +28,12 @@ public class BluePolymorph extends Polymorph{
 	public int getWidth() {
 		return width;
 	}
+	
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.blue);
+		// TODO Auto-generated method stub
+		g.setColor(Color.RED);
 		g.fillRect(x, y, width, height);
 	}
-	
+
 }
