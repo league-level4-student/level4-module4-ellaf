@@ -22,6 +22,24 @@ public class Hospital {
 	public ArrayList getPatients() {
 		return patients;
 	}
+	ArrayList<Patient> patientsTBA = patients;
+	public void assignPatientsToDoctors() {
+		// TODO Auto-generated method stub
+	for(int i = 0; i < doctors.size(); i++) {
+		for(int j = 0; j < patients.size(); j++){
+			try {
+				doctors.get(i).assignPatient(patients.get(j));
+			} catch (DoctorFullException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(doctors.get(i).getPatients().size() == 3) {
+				i++;
+			}
+		}
+	}
+		
+	}
 
 
 	
